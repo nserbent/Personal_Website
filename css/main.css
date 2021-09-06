@@ -1,0 +1,281 @@
+.header .logo {
+    font-size: 40px;
+    font-weight: 1200;
+    position: relative;
+    display: flex;
+}
+@keyframes fadeIn {
+    0% {color: white}
+    100% {color: black;}
+}
+.disclaimer h2{
+    color: rgb(124, 118, 118);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: lighter;
+}
+.about {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    animation-name: fadeIn;
+    animation-timing-function: ease-in;
+    animation-duration: 0.3s;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    overflow-x: hidden;
+    min-height: 8vh;
+    letter-spacing: 2px;
+    /* text-transform: uppercase; */
+}
+
+.navbar {
+    display: flex;
+    color: rgba(0, 0, 0, 0.801);
+    text-align: center;
+    text-decoration: none;
+    justify-content: space-around;
+    width: 40%;
+    font-size: 20px;
+}
+.navbar li{
+    list-style: none;
+    padding-right: 20px;
+}
+.navbar li a{
+    text-decoration: none;
+    padding-left: 15px;
+}
+nav .navbar a:hover {
+    color: rgb(83, 42, 197);
+    animation-name: grow;
+    animation-duration: 0.5s;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+}
+@keyframes grow {
+    0% {font-size: 20px;}
+    100% {font-size: 21px;}
+}
+body{
+    overflow-x: hidden;
+}
+body, html{
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+    transform: translate3d(0,0,0);
+}
+.burger{
+    display: none;
+    cursor: pointer;
+}
+.burger div{
+    width: 25px;
+    height: 4px;
+    background-color: black;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+html {
+    background: url(../assets/bg.jpeg) no-repeat center center fixed; 
+    -webkit-background-sizße: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.projectWindow{
+    background: url(../assets/background4edit1.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+/*Tablet Screen Adjustments*/
+@media screen and (max-width: 768px) {
+    body, html {
+        overflow-x: hidden;
+    }
+    .logo {
+        margin-left: 0.25em;
+    }
+    .navbar{
+        position: absolute;
+        right: 0;
+        height: 92vh;
+        top: 8vh;
+        background-color: #fafafa;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 40%;
+        transform: translateX(100%);
+        z-index: 1000;
+
+    }
+    .navbar li {
+        opacity: 0;
+    }
+    .burger {
+        display: block;
+        z-index: 1000;
+    }
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.side {
+    flex: 30%;
+    background-color: gray;
+    padding: 20px;
+}
+/* end tablet */
+/*    begin burger   */
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 8px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -8px);
+}
+
+/*  End burger */
+.main {
+    display: block;
+    flex: 70%;
+    background-color: cornsilk;
+    padding: 300px;
+    overflow: hidden;
+}
+.projects { 
+    display: block;
+    position: relative;
+    animation-name: fadeIn;
+    animation-timing-function: ease-in;
+    animation-duration: 0.3s;
+}
+.projects .title{
+    display: inline-table;
+    font-size: 40px;
+    font-weight: lighter;
+    font-variant: small-caps;
+    font-variant-ligatures: discretionary-ligatures;
+    background-color: rgba(255, 255, 255, 0.39);
+    box-shadow: 0 4px 60px 20px rgba(255, 255, 255, 0.39);
+}
+.projects img {
+    animation-name: glow;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes glow {
+    0% {filter: drop-shadow(0 0 0.2rem rgb(238, 159, 245))}
+    100% {filter: drop-shadow(0 0 0.9rem rgb(235, 210, 240))}
+}
+.projects ul li {
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    overflow:hidden;
+    position: relative;
+}
+@keyframes fadeIn {
+    0% {opacity: 0%;}
+    100% {opacity: 100%;}
+}
+
+.projects ul li a {
+    display: block;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-decoration: none;
+    position: relative;
+}
+
+.projects p{
+    line-height: 30px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(255, 255, 255, 0.91);
+    box-shadow: 0 4px 60px 50px rgba(255, 255, 255, 0.91);
+}
+/* current means of hiding content */
+
+
+.resume img{
+    margin-right: auto;
+    margin-left: auto;
+    outline: auto;
+    outline-width: 10px;
+    outline-color: grey;
+    display: block;
+    max-width: 60%;
+    height: auto;
+    padding: auto;
+    animation-name: fadeIn;
+    animation-timing-function: ease-in;
+    animation-duration: 0.3s;
+}
+.contact ul li a{
+    text-decoration: none;
+}
+
+@media screen and (max-width: 700px) {
+    .row {
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 400px) {
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+.siteFooter {
+    position: absolute;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    animation-name: fadeIn;
+    animation-timing-function: ease-in;
+    animation-duration: 0.3s;
+}
+}
