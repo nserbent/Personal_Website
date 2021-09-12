@@ -16,11 +16,13 @@
 }
 .about {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 90px;
+    margin-left: 20%;
+    margin-right: 20%;
     animation-name: fadeIn;
     animation-timing-function: ease-in;
     animation-duration: 0.3s;
+    margin-bottom: 30%;
 }
 
 nav {
@@ -96,6 +98,19 @@ html {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+.siteFooter {
+    margin-left: 43%;
+    margin-right: 40%;
+    padding-top: 40px;
+    text-decoration: none;
+    animation-name: fadeIn;
+    animation-timing-function: ease-in;
+    animation-duration: 0.3s;
+    padding-bottom: 60px;
+}
+.siteFooter a{
+    text-decoration: none;
 }
 /*Tablet Screen Adjustments*/
 @media screen and (max-width: 768px) {
@@ -255,7 +270,7 @@ html {
     outline-width: 10px;
     outline-color: grey;
     display: block;
-    max-width: 60%;
+    max-width: 50%;
     height: auto;
     padding: auto;
     animation-name: fadeIn;
@@ -265,6 +280,7 @@ html {
 .contact ul li a{
     text-decoration: none;
 }
+
 
 @media screen and (max-width: 700px) {
     .row {
@@ -276,14 +292,4 @@ html {
         float: none;
         width: 100%;
     }
-.siteFooter {
-    display: block;
-    margin-bottom: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    text-decoration: none;
-    animation-name: fadeIn;
-    animation-timing-function: ease-in;
-    animation-duration: 0.3s;
-}
 }
